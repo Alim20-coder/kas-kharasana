@@ -1405,6 +1405,88 @@
       [data-aos="fade-left"]:not(.aos-animate),
       [data-aos="fade-right"]:not(.aos-animate) { transform: translate3d(0, 30px, 0) !important; }
     }
+  
+    /* ===== قسم ضرب الرمل في أول الموقع ===== */
+    .sand-top-section {
+      position: relative;
+      padding: 80px 0 90px;
+      overflow: hidden;
+      background: radial-gradient(circle at 80% 20%, rgba(229, 169, 60, 0.12) 0%, transparent 60%),
+                  radial-gradient(circle at 10% 80%, rgba(100, 116, 139, 0.15) 0%, transparent 60%),
+                  var(--bg-dark-primary);
+    }
+    .sand-mosaic {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: 300px 210px;
+      gap: 14px;
+    }
+    .sand-mosaic-item {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border-gold);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+      background: var(--bg-card);
+      cursor: zoom-in;
+    }
+    .sand-mosaic-item:first-child { grid-column: 1 / -1; }
+    .sand-mosaic-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .sand-mosaic-item:hover img { transform: scale(1.06); }
+    .sand-number-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px;
+      background: rgba(229, 169, 60, 0.12);
+      border: 1px solid var(--border-gold);
+      border-radius: 12px;
+      color: var(--light-gray);
+      font-size: 1rem;
+    }
+    .sand-number-chip i { color: var(--sand-gold); }
+    .sand-number-chip strong { color: var(--sand-gold-light); letter-spacing: 0.5px; }
+    .sand-video-card {
+      height: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+    }
+    .sand-video-card video {
+      width: 100%;
+      max-height: 520px;
+      display: block;
+      background: #000;
+      object-fit: contain;
+    }
+    .sand-video-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 20px;
+      color: #E2E8F0;
+      font-weight: 700;
+    }
+    .sand-video-title i { color: var(--sand-gold); font-size: 1.2rem; }
+    @media (max-width: 991.98px) {
+      .sand-top-section { padding: 55px 0 65px; text-align: center; }
+      .sand-top-section .split-feature-list { text-align: right; }
+      .sand-top-section .d-flex { justify-content: center; }
+      .sand-mosaic { grid-template-rows: 260px 190px; }
+    }
+    @media (max-width: 575.98px) {
+      .sand-mosaic { grid-template-rows: 210px 150px; gap: 10px; }
+      .sand-number-chip { font-size: 0.9rem; padding: 9px 14px; }
+      .sand-video-title { font-size: 0.95rem; }
+    }
   </style>
 </head>
 <body>
@@ -1437,7 +1519,7 @@
 
   <nav class="navbar navbar-expand-lg main-navbar">
     <div class="container-fluid px-3 px-lg-4 px-xxl-5">
-      <a class="navbar-brand" href="#sec-hero">
+      <a class="navbar-brand" href="#sec-sand-top">
         <div class="brand-icon-box">
           <i class="fa-solid fa-hammer"></i>
         </div>
@@ -1453,7 +1535,7 @@
 
       <div class="collapse navbar-collapse" id="mainNavMenu">
         <ul class="navbar-nav nav-spread mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="#sec-hero">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#sec-sand-top">الرئيسية</a></li>
           <li class="nav-item"><a class="nav-link" href="#sec-about">من نحن</a></li>
           <li class="nav-item"><a class="nav-link" href="#sec-services-overview">خدماتنا</a></li>
           <li class="nav-item"><a class="nav-link" href="#sec-gallery">معرض الأعمال</a></li>
@@ -1470,6 +1552,229 @@
       </div>
     </div>
   </nav>
+
+  <section id="sec-sand-top" class="sand-top-section">
+    <div class="container position-relative">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="section-badge"><i class="fa-solid fa-spray-can-sparkles"></i> قسم ضرب الرمل</div>
+          <h2 class="section-title"><span>ضرب رمل</span> وتخشين الخرسانة للياسة وتنظيف الحديد والحجر بأحدث الكمبروسرات</h2>
+          <p class="text-steel fs-5 leading-relaxed">
+            فريق متخصص في أعمال <strong>ضرب الرمل</strong> بجميع أنحاء المملكة: تخشين الأسقف والجسور والأعمدة قبل اللياسة، وتنظيف حديد التسليح من الصدأ، وتنظيف الحجر والواجهات. للتواصل مع قسم ضرب الرمل مباشرة استخدم الرقم المخصص للاتصال والواتساب.
+          </p>
+          <ul class="split-feature-list">
+            <li><i class="fa-solid fa-circle-check"></i> تخشين متجانس للسطح يمنع تطبيل اللياسة.</li>
+            <li><i class="fa-solid fa-circle-check"></i> إزالة الصدأ من الحديد قبل الصب بدرجة نظافة قياسية.</li>
+            <li><i class="fa-solid fa-circle-check"></i> تنظيف الحجر والواجهات دون خدش السطح.</li>
+          </ul>
+          <div class="sand-number-chip mb-4">
+            <i class="fa-solid fa-phone-volume"></i>
+            <span>رقم ضرب الرمل (اتصال وواتساب): <strong>0566262073</strong></span>
+          </div>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="https://wa.me/966566262073?text=السلام%20عليكم%20ارغب%20في%20طلب%20خدمة%20ضرب%20رمل" target="_blank" rel="noopener noreferrer" class="btn-sand-solid">
+              <i class="fa-brands fa-whatsapp fs-5"></i> واتساب ضرب الرمل
+            </a>
+            <a href="tel:0566262073" class="btn-outline-sand">
+              <i class="fa-solid fa-phone-volume"></i> اتصل الآن 0566262073
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-right" data-aos-delay="150">
+          <div class="sand-mosaic">
+            <div class="sand-mosaic-item" onclick="openLightbox('css/p%20(6).jpeg', 'image', 'أعمال ضرب رمل ميدانية')">
+              <img src="css/p%20(6).jpeg" alt="أعمال ضرب رمل ميدانية">
+              <span class="split-img-tag"><i class="fa-solid fa-spray-can-sparkles me-1"></i> ضرب رمل بالضغط العالي</span>
+            </div>
+            <div class="sand-mosaic-item" onclick="openLightbox('css/p%20(7).jpeg', 'image', 'تخشين الأسطح الخرسانية بالرمل')">
+              <img src="css/p%20(7).jpeg" alt="تخشين الأسطح الخرسانية بالرمل">
+            </div>
+            <div class="sand-mosaic-item" onclick="openLightbox('css/p%20(8).jpeg', 'image', 'نتائج ضرب الرمل في الموقع')">
+              <img src="css/p%20(8).jpeg" alt="نتائج ضرب الرمل في الموقع">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-sand-videos" class="section-padding bg-dark-secondary">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-badge"><i class="fa-solid fa-video"></i> فيديوهات ضرب الرمل</div>
+        <h2 class="section-title">شاهد <span>ضرب الرمل</span> مباشرة من مواقع العمل</h2>
+        <p class="section-subtitle">فيديوهات حقيقية من تنفيذ فريقنا لأعمال ضرب الرمل، شغّلها من هنا مباشرة</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="sand-video-card">
+            <video src="css/v%20(4).mp4" controls muted playsinline preload="metadata"></video>
+            <div class="sand-video-title"><i class="fa-solid fa-circle-play"></i> فيديو ميداني: ضرب رمل وتخشين الخرسانة</div>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="sand-video-card">
+            <video src="css/v%20(5).mp4" controls muted playsinline preload="metadata"></video>
+            <div class="sand-video-title"><i class="fa-solid fa-circle-play"></i> فيديو ميداني: تنفيذ ضرب الرمل بالموقع</div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center gap-3 flex-wrap mt-5">
+        <a href="https://wa.me/966566262073?text=السلام%20عليكم%20شاهدت%20فيديوهات%20ضرب%20الرمل%20وارغب%20في%20عرض%20سعر" target="_blank" rel="noopener noreferrer" class="btn-sand-solid">
+          <i class="fa-brands fa-whatsapp"></i> اطلب عرض سعر ضرب رمل
+        </a>
+        <a href="tel:0566262073" class="btn-outline-sand">
+          <i class="fa-solid fa-phone"></i> اتصل 0566262073
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-service-sandblasting" class="section-padding">
+    <div class="container">
+      <div class="service-solo" data-aos="fade-up">
+        <div class="section-badge"><i class="fa-solid fa-spray-can-sparkles"></i> الرمالة وتخشين الخرسانة</div>
+        <h2 class="section-title"><span>ضرب رمل وتخشين الخرسانة للليسه</span> لضمان قوة الالتصاق التام</h2>
+        <p class="text-steel fs-5 service-solo-text">
+          يُعد <strong>ضرب رمل وتخشين الخرسانة للليسه</strong> الإجراء الهندسي الإلزامي المعتمد لدى المكاتب الاستشارية وكود البناء السعودي لتهيئة الأسطح الخرسانية الملساء. حيث تعمل الرمالة بضغط الهواء العالي على إزالة طبقة اللباني الإسمنتية الزلقة وزيوت قوالب الشدات الخشبية، وفتح المسام لإبراز الركام الصلب.
+        </p>
+      </div>
+      <ul class="solo-features" data-aos="fade-up">
+            <li><i class="fa-solid fa-check-circle"></i> القضاء النهائي على ظاهرة تطبيل وسقوط اللياسة في الأسقف والجسور والأعمدة.</li>
+            <li><i class="fa-solid fa-check-circle"></i> تحقيق خشونة سطحية قياسية (CSP 3 - CSP 5) تضمن ثبات مونة الطرطشة.</li>
+            <li><i class="fa-solid fa-check-circle"></i> استخدام رمال سيليكا نقية ومغسولة تتناسب تماماً مع نوعية الخرسانة.</li>
+            <li><i class="fa-solid fa-check-circle"></i> سرعة إنجاز قياسية قادرة على تخشين آلاف الأمتار المربعة يومياً.</li>
+      </ul>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="https://wa.me/966566262073?text=استفسار%20عن%20ضرب%20رمل%20وتخشين%20الخرسانة%20للياسة" target="_blank" rel="noopener noreferrer" class="btn-sand-solid">
+          <i class="fa-brands fa-whatsapp"></i> اطلب ضرب رمل الآن
+        </a>
+        <a href="tel:0566262073" class="btn-outline-sand">
+          <i class="fa-solid fa-phone"></i> اتصل 0566262073
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-sand-steps" class="section-padding bg-dark-secondary">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="section-badge"><i class="fa-solid fa-list-check"></i> مراحل ضرب الرمل</div>
+          <h2 class="section-title">كيف ننفذ <span>ضرب الرمل</span> في موقعك خطوة بخطوة</h2>
+          <p class="text-steel fs-5 leading-relaxed">
+            نعمل بتسلسل واضح يضمن لك سطحاً مخشناً بشكل متساوٍ وموقعاً نظيفاً عند التسليم، سواء كانت المساحة سقف فيلا أو مشروعاً كاملاً.
+          </p>
+          <ul class="split-feature-list">
+            <li><i class="fa-solid fa-circle-check"></i> معاينة الموقع وتحديد المساحات ونوع السطح قبل البدء.</li>
+            <li><i class="fa-solid fa-circle-check"></i> تجهيز الموقع وتغطية الزجاج والمناطق التي لا يشملها الضرب.</li>
+            <li><i class="fa-solid fa-circle-check"></i> ضرب الرمل بضغط هواء مضبوط على كامل السطح حتى يظهر الركام بشكل متجانس.</li>
+            <li><i class="fa-solid fa-circle-check"></i> تنظيف الموقع من الرمال والأتربة وتسليمه جاهزاً للياسة.</li>
+          </ul>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="https://wa.me/966566262073?text=طلب%20معاينة%20لضرب%20الرمل" target="_blank" rel="noopener noreferrer" class="btn-sand-solid">
+              <i class="fa-brands fa-whatsapp"></i> اطلب معاينة ضرب رمل
+            </a>
+            <a href="tel:0566262073" class="btn-outline-sand">
+              <i class="fa-solid fa-phone"></i> اتصل 0566262073
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="split-img-box">
+            <img src="css/12.jpg" alt="تخشين أسطح وجسور خرسانية للياسة بالرمل" loading="lazy">
+            <span class="split-img-tag"><i class="fa-solid fa-check me-1"></i> تخشين متجانس لكامل السطح</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-service-iron" class="section-padding">
+    <div class="container">
+      <div class="service-solo" data-aos="fade-up">
+        <div class="section-badge"><i class="fa-solid fa-bars"></i> صيانة حديد التسليح</div>
+        <h2 class="section-title"><span>تنظيف وتلميع حديد</span> التسليح وإزالة الصدأ المستعصي بالرمل</h2>
+        <p class="text-steel fs-5 service-solo-text">
+          يؤدي تعرض حديد التسليح للرطوبة والأمطار قبل الصب إلى تآكل سطحه وتكون طبقات صدأ تمنع التصاق الخرسانة به. نوفر خدمة <strong>تنظيف حديد</strong> التسليح والهياكل المعدنية عبر الرمالة المتطورة لإزالة الصدأ والشوائب بالكامل واستعادة البريق الفولاذي الأصلي.
+        </p>
+      </div>
+      <ul class="solo-features" data-aos="fade-up">
+            <li><i class="fa-solid fa-check-circle"></i> تنظيف عميق يصل لدرجة النظافة القياسية العالمية (Sa 2.5) المعتمدة استشارياً.</li>
+            <li><i class="fa-solid fa-check-circle"></i> إزالة قشور الصدأ دون تقليل القطر الفعلي أو إضعاف خواص السيخ الميكانيكية.</li>
+            <li><i class="fa-solid fa-check-circle"></i> تجهيز حديد القواعد والأعمدة والميدات لاستقبال صبة الخرسانة باعتماد هندسي فوري.</li>
+            <li><i class="fa-solid fa-check-circle"></i> إمكانية تطبيق دهانات الحماية والبرايمر المقاوم للصدأ عند الطلب.</li>
+      </ul>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="https://wa.me/966566262073?text=استفسار%20عن%20تنظيف%20وتلميع%20حديد%20التسليح%20بالرمل" target="_blank" rel="noopener noreferrer" class="btn-sand-solid">
+          <i class="fa-brands fa-whatsapp"></i> اطلب تنظيف الحديد بالرمل
+        </a>
+        <a href="tel:0566262073" class="btn-outline-sand">
+          <i class="fa-solid fa-phone"></i> اتصل 0566262073
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-sand-uses" class="section-padding bg-dark-secondary">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+          <div class="section-badge"><i class="fa-solid fa-building"></i> أين نستخدم ضرب الرمل</div>
+          <h2 class="section-title"><span>ضرب الرمل</span> للمباني السكنية والتجارية والمشاريع الصناعية</h2>
+          <p class="text-steel fs-5 leading-relaxed">
+            نجهز طاقم ومعدات ضرب الرمل حسب حجم مشروعك ومدته، ونلتزم بالجدول الزمني المتفق عليه في كل الأحجام.
+          </p>
+          <ul class="split-feature-list">
+            <li><i class="fa-solid fa-circle-check"></i> الفلل والعمائر السكنية: تخشين الأسقف والجسور والأعمدة قبل اللياسة.</li>
+            <li><i class="fa-solid fa-circle-check"></i> المباني التجارية والأبراج: عمل منظم لا يعطل بقية الأعمال في الموقع.</li>
+            <li><i class="fa-solid fa-circle-check"></i> المصانع والمستودعات: تجهيز الأرضيات والأسطح قبل العزل والإيبوكسي.</li>
+            <li><i class="fa-solid fa-circle-check"></i> المشاريع الكبرى: تنفيذ مساحات واسعة بأكثر من طاقم وفق جدول زمني محدد.</li>
+          </ul>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="https://wa.me/966566262073?text=استفسار%20عن%20ضرب%20الرمل%20لمشروع" target="_blank" rel="noopener noreferrer" class="btn-sand-solid">
+              <i class="fa-brands fa-whatsapp"></i> اطلب عرض سعر لمشروعك
+            </a>
+            <a href="tel:0566262073" class="btn-outline-sand">
+              <i class="fa-solid fa-phone"></i> اتصل 0566262073
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+          <div class="split-img-box">
+            <img src="css/20.jpg" alt="مشروع ضرب رمل لمنشأة صناعية بالمملكة" loading="lazy">
+            <span class="split-img-tag"><i class="fa-solid fa-industry me-1"></i> مشاريع سكنية وتجارية وصناعية</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-service-stone" class="section-padding">
+    <div class="container">
+      <div class="service-solo" data-aos="fade-up">
+        <div class="section-badge"><i class="fa-solid fa-monument"></i> تنظيف الواجهات المعمارية</div>
+        <h2 class="section-title"><span>تنظيف الحجر بل رمل</span> والواجهات المعمارية والرخام</h2>
+        <p class="text-steel fs-5 service-solo-text">
+          تتعرض واجهات المباني والفلل المصنوعة من حجر الرياض والحجر الطبيعي لتراكم الأتربة، التكلسات، بقع الدهانات، أو آثار الدخان والحرائق. تمنحك تقنية <strong>تنظيف الحجر بل رمل</strong> الناعم استعادة المظهر المعماري الفاخر للمبنى كما لو كان جديداً تماماً.
+        </p>
+      </div>
+      <ul class="solo-features" data-aos="fade-up">
+        <li><i class="fa-solid fa-check-circle"></i> ضغط هواء مدروس وحبيبات رملية ناعمة تحافظ على نتوءات الحجر الطبيعي.</li>
+        <li><i class="fa-solid fa-check-circle"></i> إزالة الرواسب الكلسية والملحية والأصباغ القديمة دون خدش السطح.</li>
+        <li><i class="fa-solid fa-check-circle"></i> مناسب لواجهات الفلل، القصور، المنشآت الحكومية، والمباني التراثية.</li>
+        <li><i class="fa-solid fa-check-circle"></i> أطقم عمل مدربة وسقالات أمان معتمدة لكافة الارتفاعات.</li>
+      </ul>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="https://wa.me/966566262073?text=استفسار%20عن%20تنظيف%20الحجر%20بالرمل" target="_blank" rel="noopener noreferrer" class="btn-sand-solid">
+          <i class="fa-brands fa-whatsapp"></i> اطلب تنظيف واجهات الحجر
+        </a>
+        <a href="tel:0566262073" class="btn-outline-sand">
+          <i class="fa-solid fa-phone"></i> اتصل 0566262073
+        </a>
+      </div>
+    </div>
+  </section>
 
   <header id="sec-hero" class="hero-section">
     <div class="container">
@@ -1699,75 +2004,6 @@
     </div>
   </section>
 
-  <section id="sec-service-sandblasting" class="section-padding bg-dark-secondary">
-    <div class="container">
-      <div class="service-solo" data-aos="fade-up">
-        <div class="section-badge"><i class="fa-solid fa-spray-can-sparkles"></i> الرمالة وتخشين الخرسانة</div>
-        <h2 class="section-title"><span>ضرب رمل وتخشين الخرسانة للليسه</span> لضمان قوة الالتصاق التام</h2>
-        <p class="text-steel fs-5 service-solo-text">
-          يُعد <strong>ضرب رمل وتخشين الخرسانة للليسه</strong> الإجراء الهندسي الإلزامي المعتمد لدى المكاتب الاستشارية وكود البناء السعودي لتهيئة الأسطح الخرسانية الملساء. حيث تعمل الرمالة بضغط الهواء العالي على إزالة طبقة اللباني الإسمنتية الزلقة وزيوت قوالب الشدات الخشبية، وفتح المسام لإبراز الركام الصلب.
-        </p>
-      </div>
-      <ul class="solo-features" data-aos="fade-up">
-            <li><i class="fa-solid fa-check-circle"></i> القضاء النهائي على ظاهرة تطبيل وسقوط اللياسة في الأسقف والجسور والأعمدة.</li>
-            <li><i class="fa-solid fa-check-circle"></i> تحقيق خشونة سطحية قياسية (CSP 3 - CSP 5) تضمن ثبات مونة الطرطشة.</li>
-            <li><i class="fa-solid fa-check-circle"></i> استخدام رمال سيليكا نقية ومغسولة تتناسب تماماً مع نوعية الخرسانة.</li>
-            <li><i class="fa-solid fa-check-circle"></i> سرعة إنجاز قياسية قادرة على تخشين آلاف الأمتار المربعة يومياً.</li>
-      </ul>
-      <div class="d-flex justify-content-center gap-3 flex-wrap">
-        <a href="https://wa.me/966544085072?text=استفسار%20عن%20ضرب%20رمل%20وتخشين%20الخرسانة%20للياسة" target="_blank" rel="noopener noreferrer" class="btn-sand-solid">
-              <i class="fa-brands fa-whatsapp"></i> اطلب ضرب رمل الآن
-            </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="sec-service-iron" class="section-padding">
-    <div class="container">
-      <div class="service-solo" data-aos="fade-up">
-        <div class="section-badge"><i class="fa-solid fa-bars"></i> صيانة حديد التسليح</div>
-        <h2 class="section-title"><span>تنظيف وتلميع حديد</span> التسليح وإزالة الصدأ المستعصي بالرمل</h2>
-        <p class="text-steel fs-5 service-solo-text">
-          يؤدي تعرض حديد التسليح للرطوبة والأمطار قبل الصب إلى تآكل سطحه وتكون طبقات صدأ تمنع التصاق الخرسانة به. نوفر خدمة <strong>تنظيف حديد</strong> التسليح والهياكل المعدنية عبر الرمالة المتطورة لإزالة الصدأ والشوائب بالكامل واستعادة البريق الفولاذي الأصلي.
-        </p>
-      </div>
-      <ul class="solo-features" data-aos="fade-up">
-            <li><i class="fa-solid fa-check-circle"></i> تنظيف عميق يصل لدرجة النظافة القياسية العالمية (Sa 2.5) المعتمدة استشارياً.</li>
-            <li><i class="fa-solid fa-check-circle"></i> إزالة قشور الصدأ دون تقليل القطر الفعلي أو إضعاف خواص السيخ الميكانيكية.</li>
-            <li><i class="fa-solid fa-check-circle"></i> تجهيز حديد القواعد والأعمدة والميدات لاستقبال صبة الخرسانة باعتماد هندسي فوري.</li>
-            <li><i class="fa-solid fa-check-circle"></i> إمكانية تطبيق دهانات الحماية والبرايمر المقاوم للصدأ عند الطلب.</li>
-      </ul>
-      <div class="d-flex justify-content-center gap-3 flex-wrap">
-        <a href="tel:0544085072" class="btn-sand-solid">
-              <i class="fa-solid fa-phone"></i> تواصل لخدمة تنظيف الحديد
-            </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="sec-service-stone" class="section-padding bg-dark-secondary">
-    <div class="container">
-      <div class="service-solo" data-aos="fade-up">
-        <div class="section-badge"><i class="fa-solid fa-monument"></i> تنظيف الواجهات المعمارية</div>
-        <h2 class="section-title"><span>تنظيف الحجر بل رمل</span> والواجهات المعمارية والرخام</h2>
-        <p class="text-steel fs-5 service-solo-text">
-          تتعرض واجهات المباني والفلل المصنوعة من حجر الرياض والحجر الطبيعي لتراكم الأتربة، التكلسات، بقع الدهانات، أو آثار الدخان والحرائق. تمنحك تقنية <strong>تنظيف الحجر بل رمل</strong> الناعم استعادة المظهر المعماري الفاخر للمبنى كما لو كان جديداً تماماً.
-        </p>
-      </div>
-      <ul class="solo-features" data-aos="fade-up">
-        <li><i class="fa-solid fa-check-circle"></i> ضغط هواء مدروس وحبيبات رملية ناعمة تحافظ على نتوءات الحجر الطبيعي.</li>
-        <li><i class="fa-solid fa-check-circle"></i> إزالة الرواسب الكلسية والملحية والأصباغ القديمة دون خدش السطح.</li>
-        <li><i class="fa-solid fa-check-circle"></i> مناسب لواجهات الفلل، القصور، المنشآت الحكومية، والمباني التراثية.</li>
-        <li><i class="fa-solid fa-check-circle"></i> أطقم عمل مدربة وسقالات أمان معتمدة لكافة الارتفاعات.</li>
-      </ul>
-      <div class="d-flex justify-content-center gap-3 flex-wrap">
-        <a href="https://wa.me/966544085072?text=استفسار%20عن%20تنظيف%20الحجر%20بالرمل" target="_blank" rel="noopener noreferrer" class="btn-sand-solid">
-              <i class="fa-brands fa-whatsapp"></i> اطلب تنظيف واجهات الحجر
-            </a>
-      </div>
-    </div>
-  </section>
-
   <section id="sec-service-core" class="section-padding">
     <div class="container">
       <div class="row align-items-center g-5">
@@ -1869,7 +2105,10 @@
           </ul>
           <div class="d-flex gap-3 flex-wrap">
             <a href="tel:0544085072" class="btn-sand-solid">
-              <i class="fa-solid fa-phone"></i> اتصل لخدمات التكسير وحفر القواعد
+              <i class="fa-solid fa-phone"></i> اتصل لخدمات التكسير وحفر القواعد 0544085072
+            </a>
+            <a href="https://wa.me/966544085072?text=استفسار%20عن%20تكسير%20الخرسانة%20وحفر%20القواعد" target="_blank" rel="noopener noreferrer" class="btn-outline-sand">
+              <i class="fa-brands fa-whatsapp"></i> واتساب التكسير
             </a>
           </div>
         </div>
